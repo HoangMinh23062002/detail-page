@@ -14,7 +14,7 @@ button {
 }
 
 .overall-content {
-  max-width: 71.3rem;
+  // max-width: 71.3rem;
   height: auto;
   margin: 0 auto;
 }
@@ -86,6 +86,7 @@ button {
   }
 
   &-link {
+    font-weight: 600;
     font-size: 15px;
     line-height: 22.5px;
     color: #FFFFFF;
@@ -110,6 +111,7 @@ button {
   &-link:hover{
    cursor: pointer;
   }
+
   @media only screen and (min-width: 1189px) {
     position: relative;
     top: 0;
@@ -144,7 +146,7 @@ button {
   .quantity-nation{
     position: absolute;
 
-    left: 0%;
+    // left: 0%;
   }
 }
 .burger {

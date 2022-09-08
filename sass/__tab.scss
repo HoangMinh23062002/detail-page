@@ -72,14 +72,14 @@ body {
 }
 
 @media screen and (max-width: 600px) {
-  .all-policies{
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 28; /* number of lines to show */
-            line-clamp: 2; 
-    -webkit-box-orient: vertical;
-}
+//   .all-policies{
+//     overflow: hidden;
+//     text-overflow: ellipsis;
+//     display: -webkit-box;
+//     -webkit-line-clamp: 28; /* number of lines to show */
+//             line-clamp: 2; 
+//     -webkit-box-orient: vertical;
+// }
 .container-tab {
   .card {
     

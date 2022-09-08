@@ -73,7 +73,7 @@
   -webkit-user-select: none;
 }
 .prev {
-  margin-left: 59px;
+  margin-left: 54px;
 }
 .next {
   right: 0;
@@ -422,4 +422,28 @@ max-width: 450px;
 
     transition: 0.3s;
   }
+}
+@media only screen and (max-width: 448px) {
+  
+.btn {
+
+  &:hover,
+  &--outline {
+    .btn {
+      &__overlay {
+        opacity: 1;
+      }
+
+      &__text {
+        
+        color: #cb9d37;
+      }
+    }
+  }
+
+  &--outline {
+    margin-top: 14px;
+  }
+
+}
 }

@@ -43,8 +43,10 @@
       flex-wrap: wrap;
       padding: 64px 0 34px 0;
       & .fa-brands {
+        font-size: 30px;
+
         color: white;
-        padding: 0 24px;
+        margin: 0 24px;
       }
       &-one i {
         width: 30px;
