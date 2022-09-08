@@ -1,0 +1,83 @@
+:root {
+    --pink: #357fff;
+    --animation-curve: cubic-bezier(0.12, 0.7, 0.74, 0.71);
+  }
+.icon-contact {
+  right: 0;
+  bottom: 3%;
+  z-index: 99;
+  cursor: pointer;
+  position: fixed;
+  &-message {
+    color: #357fff;
+    border: 1px solid white;
+    max-width: 64px;
+    max-height: 64px;
+    width: 4.444vw;
+    height: 4.444vw;
+    min-width: 44px;
+    font-size: 25px;
+    min-height: 44px;
+    background-color: white;
+    box-shadow: 4px 4px 16px rgb(0 0 0 / 10%);
+    border-radius: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &-message:hover {
+    transform: scale(0.5);
+  }
+ 
+}
+  .phone {
+    right: 30%;
+    bottom: 160%;
+    font-size: 25px;
+    z-index: 2;
+    background-color: var(--pink);
+    animation: phone 1s var(--animation-curve) infinite alternate-reverse;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    border: 0.5px white solid;
+  }
+  
+  .material-icons {
+    color: white;
+  }
+  
+  .phone {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: red;
+    position: absolute;
+    animation: scaling 2s var(--animation-curve) infinite;
+  }
+  
+  @keyframes scaling {
+    0% {
+      transform: scale(1.5);
+      background-color: var(--pink);
+    }
+    100% {
+      transform: scale(2);
+      background-color: rgba(245, 0, 182, 0);
+    }
+  }
+  
+  @keyframes phone {
+    0% {
+      transform: scale(2);
+    }
+    100% {
+      transform: scale(2.5);
+    }
+  }
+  .circle1 {
+    animation-delay: 0s;
+  }
+  .circle2 {
+    animation-delay: 1s;
+  }
