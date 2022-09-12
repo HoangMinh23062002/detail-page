@@ -221,3 +221,104 @@ body {
 .sub-title{
   font-size: 16px;
 }
+.product-content{
+  height: 1197px;
+  margin-top: 96px;
+  &__tabs{
+      margin-bottom: 47px;
+  }
+  &__list{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      column-gap: 48px;
+      margin: 0 auto;
+      border-bottom: 1px solid $bgd-collections;
+  }
+  &__item{
+      padding-bottom: 15px;
+      position: relative;
+  }
+  &__link{
+      position: relative;
+      font-family: $ff-roboto;
+      font-weight: var(--fw-main);
+      font-size: var(--fz-name);
+      line-height: var(--lh-title);
+      letter-spacing: var(--lt-2);
+      color: #A5A5A5;
+      background: none;
+      &.active{
+          font-weight: var(--fw-title);
+          font-size: var(--fz-name);
+          line-height: var(--lh-title);
+          letter-spacing: var(--lt-2);
+          color: #CB9D37;
+          &::after{
+              content: "";
+              display: block;
+              width: 100%;
+              height: 3px;
+              margin-top: 14px;
+              position: absolute;
+              background-color: #001A31;
+              transition: all .3s;
+          }
+      }
+      &:hover::after{
+          content: "";
+          display: block;
+          width: 100%;
+          height: 3px;
+          margin-top: 14px;
+          position: absolute;
+          background-color: #001A31;
+          transition: all 0.3s ease;
+      }
+  }
+  &__detail{
+      color: #001A31;
+      font-family: $ff-poppins;
+      &.product-content__container{
+          max-width: 785px;
+          margin: 0 auto;
+      }
+  }
+  &__policy,&__infor{
+      &--return,&--list{
+          margin-bottom: 48px;
+      }
+      &--spacing{
+          margin-bottom: 24px;
+      }
+      h2{
+          font-size: var(--fz-main);
+          font-weight: var(--fw-title);
+          line-height: var(--lh-content);
+      }
+      h4{
+          font-size: var(--fz-text);
+          font-weight: var(--fw-title);
+          line-height: var(lh-txt);
+      }
+      p{
+          font-size: var(--fz-text);
+          font-weight: var(--fw-main);
+          line-height: 25.6px;
+          letter-spacing: 2.5%;
+      }
+      ul{
+          padding-left: 20px;
+          list-style-position: inside;
+          list-style-type: disc;
+      }
+      li{
+          font-size: var(--fz-text);
+          font-weight: var(--fw-main);
+          line-height: var(--lh-txt);
+      }
+  }
+  &__infor{
+      display: none;
+  }
+}

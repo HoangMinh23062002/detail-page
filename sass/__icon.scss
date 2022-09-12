@@ -3,7 +3,7 @@
     --animation-curve: cubic-bezier(0.12, 0.7, 0.74, 0.71);
   }
 .icon-contact {
-  right: 0;
+  right: 1%;
   bottom: 3%;
   z-index: 99;
   cursor: pointer;
@@ -80,4 +80,19 @@
   }
   .circle2 {
     animation-delay: 1s;
+  }
+  @media screen and (max-width: 1026px) {
+    .phone {
+      font-size: 15px;
+    }
+  
+    .phone {
+      height: 30px;
+      width: 30px;
+    }
+    .material-icons {
+
+      font-size: 14px;
+ 
+  }
   }

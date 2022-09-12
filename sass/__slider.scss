@@ -227,6 +227,7 @@
 
 }
 .product-detail-quantity-minus{
+  cursor: pointer;
   margin-right: 28px;
 }
 .product-detail- .product-detail-quantity-minus,
@@ -370,7 +371,9 @@ max-width: 450px;
 
   cursor: pointer;
   white-space: nowrap;
-
+  &--outline{
+    margin-left: 14px;
+  }
   &:hover,
   &--outline {
     .btn {
@@ -423,10 +426,12 @@ max-width: 450px;
     transition: 0.3s;
   }
 }
-@media only screen and (max-width: 448px) {
+@media only screen and (max-width: 500px) {
   
 .btn {
-
+  &--outline{
+    margin-left: 0px;
+  }
   &:hover,
   &--outline {
     .btn {
@@ -443,6 +448,7 @@ max-width: 450px;
 
   &--outline {
     margin-top: 14px;
+    // margin-left: -10px;
   }
 
 }

@@ -7,6 +7,114 @@ body::-webkit-scrollbar {
   display: none;
 }
 
+:root {
+  --fz-title: 36px;
+  --fz-main: 24px;
+  --fz-brand: 20px;
+  --fz-name: 18px;
+  --fz-text: 16px;
+  --fz-filter: 15px;
+  --fz-navbar: 14px;
+  --fz-ft: 12px;
+  --lh-nav: 22px;
+  --lh-title: 130%;
+  --lh-ft: 120%;
+  --lh-content: 36px;
+  --lh-price: 27px;
+  --lh-txt: 24px;
+  --lh-btn: 21px;
+  --lh-qty: 15px;
+  --lh-add: 18px;
+  --lh-brand:42px;
+  --fw-title: 700;
+  --fw-nav: 600;
+  --fw-main: 400;
+  --fw-brand: 300;
+  --lt-1: 0.05em;
+  --lt-2: 0.025em;
+}
+
+@media only screen and (max-width: 1200px) {
+  :root {
+    --fz-title: 34px;
+    --fz-main: 22px;
+    --fz-brand: 18px;
+    --fz-name: 16px;
+    --fz-text: 14px;
+    --fz-filter: 13px;
+    --fz-navbar: 12px;
+    --fz-ft: 10px;
+    --lh-nav: 20px;
+    --lh-title: 110%;
+    --lh-ft: 100%;
+    --lh-price: 25px;
+    --lh-txt: 22px;
+    --lh-btn: 19px;
+    --lh-qty: 13px;
+    --lh-add: 16px;
+    --lh-brand:40px;
+    --fw-title: 700;
+    --fw-nav: 600;
+    --fw-main: 400;
+    --fw-brand: 300;
+    --lt-1: 0.05em;
+    --lt-2: 0.025em;
+  }
+}
+@media only screen and (max-width: 920px) {
+  :root {
+    --fz-title: 28px;
+    --fz-main: 20px;
+    --fz-brand: 16px;
+    --fz-name: 14px;
+    --fz-text: 12px;
+    --fz-filter: 11px;
+    --fz-navbar: 10px;
+    --fz-ft: 8px;
+    --lh-nav: 18px;
+    --lh-title: 90%;
+    --lh-ft: 80%;
+    --lh-price: 23px;
+    --lh-txt: 20px;
+    --lh-btn: 17px;
+    --lh-qty: 11px;
+    --lh-add: 14px;
+    --lh-brand:38px;
+    --fw-title: 700;
+    --fw-nav: 600;
+    --fw-main: 400;
+    --fw-brand: 300;
+    --lt-1: 0.05em;
+    --lt-2: 0.025em;
+  }
+}
+@media only screen and (max-width: 668px) {
+  :root {
+    --fz-title: 24px;
+    --fz-main: 16px;
+    --fz-brand: 14px;
+    --fz-name: 12px;
+    --fz-text: 10px;
+    --fz-filter: 10px;
+    --fz-navbar: 9px;
+    --fz-ft: 8px;
+    --lh-nav: 18px;
+    --lh-title: 90%;
+    --lh-ft: 80%;
+    --lh-price: 23px;
+    --lh-txt: 20px;
+    --lh-btn: 17px;
+    --lh-qty: 11px;
+    --lh-add: 14px;
+    --lh-brand:38px;
+    --fw-title: 700;
+    --fw-nav: 600;
+    --fw-main: 400;
+    --fw-brand: 300;
+    --lt-1: 0.05em;
+    --lt-2: 0.025em;
+  }
+}
 * {
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -54,6 +162,7 @@ button {
   transition: all 0.35s ease;
 }
 .header.on-scroll {
+  transition: all 3s ease;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
@@ -64,6 +173,7 @@ button {
   justify-content: flex-start;
   column-gap: 1rem;
   width: 100%;
+  transition: all 3s ease;
   height: 102px;
   margin: 0 auto;
 }
@@ -545,6 +655,7 @@ button {
 }
 
 .product-detail-quantity-minus {
+  cursor: pointer;
   margin-right: 28px;
 }
 
@@ -683,6 +794,9 @@ button {
   cursor: pointer;
   white-space: nowrap;
 }
+.btn--outline {
+  margin-left: 14px;
+}
 .btn:hover .btn__overlay, .btn--outline .btn__overlay {
   opacity: 1;
 }
@@ -716,7 +830,10 @@ button {
   transition: 0.3s;
 }
 
-@media only screen and (max-width: 448px) {
+@media only screen and (max-width: 500px) {
+  .btn--outline {
+    margin-left: 0px;
+  }
   .btn:hover .btn__overlay, .btn--outline .btn__overlay {
     opacity: 1;
   }
@@ -1038,6 +1155,106 @@ body {
   font-size: 16px;
 }
 
+.product-content {
+  height: 1197px;
+  margin-top: 96px;
+}
+.product-content__tabs {
+  margin-bottom: 47px;
+}
+.product-content__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 48px;
+  margin: 0 auto;
+  border-bottom: 1px solid #F2F2F2;
+}
+.product-content__item {
+  padding-bottom: 15px;
+  position: relative;
+}
+.product-content__link {
+  position: relative;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: var(--fw-main);
+  font-size: var(--fz-name);
+  line-height: var(--lh-title);
+  letter-spacing: var(--lt-2);
+  color: #A5A5A5;
+  background: none;
+}
+.product-content__link.active {
+  font-weight: var(--fw-title);
+  font-size: var(--fz-name);
+  line-height: var(--lh-title);
+  letter-spacing: var(--lt-2);
+  color: #CB9D37;
+}
+.product-content__link.active::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px;
+  margin-top: 14px;
+  position: absolute;
+  background-color: #001A31;
+  transition: all 0.3s;
+}
+.product-content__link:hover::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px;
+  margin-top: 14px;
+  position: absolute;
+  background-color: #001A31;
+  transition: all 0.3s ease;
+}
+.product-content__detail {
+  color: #001A31;
+  font-family: "Poppins", sans-serif;
+}
+.product-content__detail.product-content__container {
+  max-width: 785px;
+  margin: 0 auto;
+}
+.product-content__policy--return, .product-content__policy--list, .product-content__infor--return, .product-content__infor--list {
+  margin-bottom: 48px;
+}
+.product-content__policy--spacing, .product-content__infor--spacing {
+  margin-bottom: 24px;
+}
+.product-content__policy h2, .product-content__infor h2 {
+  font-size: var(--fz-main);
+  font-weight: var(--fw-title);
+  line-height: var(--lh-content);
+}
+.product-content__policy h4, .product-content__infor h4 {
+  font-size: var(--fz-text);
+  font-weight: var(--fw-title);
+  line-height: var(lh-txt);
+}
+.product-content__policy p, .product-content__infor p {
+  font-size: var(--fz-text);
+  font-weight: var(--fw-main);
+  line-height: 25.6px;
+  letter-spacing: 2.5%;
+}
+.product-content__policy ul, .product-content__infor ul {
+  padding-left: 20px;
+  list-style-position: inside;
+  list-style-type: disc;
+}
+.product-content__policy li, .product-content__infor li {
+  font-size: var(--fz-text);
+  font-weight: var(--fw-main);
+  line-height: var(--lh-txt);
+}
+.product-content__infor {
+  display: none;
+}
+
 .product-accessories {
   font-family: "Poppins", sans-serif;
 }
@@ -1123,7 +1340,7 @@ body {
 }
 
 .icon-contact {
-  right: 0;
+  right: 1%;
   bottom: 3%;
   z-index: 99;
   cursor: pointer;
@@ -1200,6 +1417,19 @@ body {
 
 .circle2 {
   animation-delay: 1s;
+}
+
+@media screen and (max-width: 1026px) {
+  .phone {
+    font-size: 15px;
+  }
+  .phone {
+    height: 30px;
+    width: 30px;
+  }
+  .material-icons {
+    font-size: 14px;
+  }
 }
 
 /*# sourceMappingURL=app.css.map */

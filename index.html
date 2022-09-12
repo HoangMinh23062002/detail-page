@@ -130,10 +130,10 @@
 				<form action="#" class="product-detail-count-form">
 					<p for="size" class="product-detail-count-title">Quantity</p>
 					<div class="product-detail-quantity">
-						<div class="product-detail-quantity-minus is-form" onclick="minus()">-</div>
-						<input type="text" name="quantity" value="01" class="product-detail-quantity-qty"
+						<div class="product-detail-quantity-minus is-form" id="btn-incre" onclick="minusQuantity('0')">-</div>
+						<input type="text" name="quantity" value="01" id="number" class="product-detail-quantity-qty"
 							id="qty-input" min="0" max="100">
-						<div class="product-detail-quantity-plus is-form" onclick="plus()">+</div>
+						<div class="product-detail-quantity-plus is-form" id="btn-decre" onclick="plusQuantity('100')" >+</div>
 					</div>
 				</form>
 				<div class="product-detail">
@@ -143,7 +143,7 @@
 					</button>
 				
 				
-					<button class="btn btn--outline" style="margin-left: 14px;">
+					<button class="btn btn--outline" style="">
 						<span class="btn__overlay"></span>
 						<span class="btn__text">
 							Add To Cart now
@@ -182,71 +182,85 @@
 					  <div class="glider"></div>
 					  <section class="content">
 						<div class="item" id="content-1">
-							<div class="all-policies">
-								<h2 class="main-title">1. Warranty Policy</h2>
-								<h4 class="sub-title">Warranty coverage</h4>
-								<ul class="text-policy">
-								<li>All XOR phone products are officially distributed in the Vietnam market via Gluxury.</li>
-								<li>Warranty period: 1 year from the date of purchase based on the Warranty Card.</li>
-								</ul>
-								<br>
-								<br>
-								<h4 class="sub-title">The warranty period for repaired / replaced products</h4>
-								<p>The warranty period for replacement spare parts is calculated as follows:</p>
-								<ul>
-								<li>
-								If the product has a warranty period of more than 6 months, the warranty period of the replacement spare
-								part will be equal to the remaining warranty period of the product.
-								</li>
-								<li>
-								If the product has less than 6 months of the warranty period
-								or was out of warranty, the warranty period of replacement parts will be 6 months.
-								</li>
-								</ul>
-								<br>
-								<br>
-								<h4 class="sub-title">Warranty period with renewed products</h4>
-								<p>The warranty period of the renewed products is calculated as follows:</p>
-								<ul>
-								<li>
-								If the product has a warranty period of more than 6 months, the warranty period of the new equipment
-								will be equal to the remaining warranty period of the product.</li>
-								<li>
-								If the product has a warranty period of fewer than 6 months or is out of warranty,
-								the warranty period of renewed equipment will be 6 months.
-								</li>
-								</ul>
-								<br>
-								<br>
-								<h2 class="main-title"> <strong>Warranty conditions</strong>  </h2>
-								<p>The XOR phone products must be distributed genuinely in Vietnam.</p>
-								<p>
-								The products have some technical defects that need to be repaired within the warranty period.
-								</p>
-								<p>
-								The products will NOT be covered by warranty if
-								they fall under the following warranty disclaimers:
-								</p>
-								<ul>
-								<li>Product warranty expires.</li>
-								<li>Cannot read IMEI on screen.</li>
-								<li>
-								There is no warranty card or the information on
-								the warranty card does not match with the device information.
-								</li>
-								<li>The product is damaged due to normal wear and tear, improper use.</li>
-								<li>The product is tampered with by a third party</li>
-								<li>
-								Failure or damage due to accident, carelessness, dropping, fire or explosion, exposure to water or chemicals,
-								used in high temperature or humid places, natural disasters.
-								</li>
-								<li>The device is in a locked state, locked sim.</li>
-								<li>
-								Errors or failures due to a functional error of the mobile network operators or a
-								third party that is not under the control of XOR Inc.
-								</li>
-								</ul>
-								</div>
+							<div id="product-content__policy" class="product-content__policy tabcontent">
+                                <div class="product-content__policy--return">
+                                    <h2><strong>1. Return Policy</strong></h2>
+                                    <p class="product-content__policy--spacing">Return Policy Customers have the right to refund the device within 28 days 
+                                        from the date of purchase if it is due to a manufacturer's fault.
+                                    </p>
+                                    <p class="product-content__policy--spacing">The refund is FREE</p>
+                                    <p>Refund conditions:</p>
+                                    <ul>
+                                        <li>The device works normally: not locked, showing IMEI.</li>
+                                        <li>The device is intact, not scratched, burned, soaked in water or chemicals, not dropped.</li>
+                                        <li>With original box, accessories, and warranty card included.</li>
+                                    </ul>
+                                </div>
+                                <!-- cách -->
+                                <div class="product-content__policy--warr">
+                                    <h2><strong>1. Warranty Policy</strong></h2>
+                                    <h4><strong>Warranty coverage</strong></h4>
+                                    <ul class="product-content__policy--list">
+                                        <li>All XOR phone products are officially distributed in the Vietnam market via Gluxury.</li>
+                                        <li>Warranty period: 1 year from the date of purchase based on the Warranty Card.</li>
+                                    </ul>
+                                    <!-- cách -->
+                                    <h4><strong>The warranty period for repaired / replaced products</strong></h4>
+                                    <p>The warranty period for replacement spare parts is calculated as follows:</p>
+                                    <ul class="product-content__policy--list">
+                                        <li>
+                                            If the product has a warranty period of more than 6 months, the warranty period of the replacement spare 
+                                            part will be equal to the remaining warranty period of the product.
+                                        </li>
+                                        <li>
+                                            If the product has less than 6 months of the warranty period 
+                                            or was out of warranty, the warranty period of replacement parts will be 6 months.
+                                        </li>
+                                    </ul>
+                                    <!-- cách -->
+                                    <h4><strong>Warranty period with renewed products</strong></h4>
+                                    <p>The warranty period of the renewed products is calculated as follows:</p>
+                                    <ul class="product-content__policy--list">
+                                        <li>
+                                            If the product has a warranty period of more than 6 months, the warranty period of the new equipment
+                                             will be equal to the remaining warranty period of the product.
+                                        </li>
+                                        <li>
+                                            If the product has a warranty period of fewer than 6 months or is out of warranty, 
+                                            the warranty period of renewed equipment will be 6 months.
+                                        </li>
+                                    </ul>
+                                    <!-- cách -->
+                                    <h4><strong>Warranty conditions</strong></h4>
+                                    <p>The XOR phone products must be distributed genuinely in Vietnam.</p>
+                                    <p>
+                                        The products have some technical defects that need to be repaired within the warranty period.
+                                    </p>
+                                    <p>
+                                        The products will NOT be covered by warranty if 
+                                        they fall under the following warranty disclaimers:
+                                    </p>
+                                    <!-- <ul>
+                                        <li>Product warranty expires.</li>
+                                        <li>Cannot read IMEI on screen.</li>
+                                        <li>
+                                            There is no warranty card or the information on 
+                                            the warranty card does not match with the device information.
+                                        </li>
+                                        <li>The product is damaged due to normal wear and tear, improper use.</li>
+                                        <li>The product is tampered with by a third party</li>
+                                        <li>
+                                            Failure or damage due to accident, carelessness, dropping, fire or explosion, exposure to water or chemicals, 
+                                            used in high temperature or humid places, natural disasters.
+                                        </li>
+                                        <li>The device is in a locked state, locked sim.</li>
+                                        <li>
+                                            Errors or failures due to a functional error of the mobile network operators or a 
+                                            third party that is not under the control of XOR Inc.
+                                        </li>
+                                    </ul> -->
+                                </div>
+                            </div>
 								
 						 <div class="item" id="content-2">
 						   <p>
@@ -301,7 +315,7 @@
 				<i class="fa-brands fa-facebook-messenger"></i>
 			</div>
 			<div class='phone' >
-				<span class="material-icons" style="font-size: 18px;">
+				<span class="material-icons" style="">
 				  call
 				</span>
 			  </div>
@@ -359,4 +373,5 @@
 <script src="./js/header.js"></script>
 <script src="./js/slider.js"></script>
 <script src="./js/remo.js"></script>
+<script src="./js//button.js"></script>
 </html>
