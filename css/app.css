@@ -1363,9 +1363,6 @@ body {
   align-items: center;
   justify-content: center;
 }
-.icon-contact-message:hover {
-  transform: scale(0.5);
-}
 
 .phone {
   right: 30%;
