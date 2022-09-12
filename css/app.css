@@ -556,7 +556,8 @@ button {
   width: 16.66%;
 }
 .column .demo {
-  width: 60px;
+  max-width: 60px;
+  width: 14vw;
   height: 60px;
 }
 
