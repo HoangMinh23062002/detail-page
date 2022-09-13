@@ -17,6 +17,7 @@ button {
   // max-width: 71.3rem;
   height: auto;
   margin: 0 auto;
+  
 }
 
 .header {
@@ -89,6 +90,7 @@ button {
   }
 
   &-link {
+    letter-spacing: 0.05em;
     font-weight: 600;
     font-size: 15px;
     line-height: 22.5px;
@@ -102,11 +104,12 @@ button {
       color: white;
       padding: 5px 8px;
       border-radius: 2px;
-      margin-left: 14px;
+      margin-left: 21px;
     }
     & .quantity-nation{
       text-align: center;
       margin-left: 10px;
+      font-size: 22px;
     }
   }
 
@@ -306,6 +309,4 @@ button {
       background: red;
     }
   }
-  
-
 }

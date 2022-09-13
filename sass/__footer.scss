@@ -9,12 +9,13 @@
     color: #ffffff;
     background-color: #00344c;
     padding: 8px 0 24px 0;
+    
     &-timeworking {
       width: 400px;
     }
     &-phonenumber {
       display: flex;
-      h3 {
+      h3{
         line-height: 14.4px;
         height: 40px;
         background-color: rgba(255, 255, 255, 0.1);
