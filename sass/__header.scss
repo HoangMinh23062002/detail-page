@@ -21,7 +21,7 @@ button {
 }
 
 .header {
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
   text-align: center;
@@ -34,7 +34,7 @@ button {
   transition: all 0.35s ease;
 
   &.on-scroll {
-    transition: all 3s ease;
+    // transition: all 3s ease;
     // height: 90px;
     // background: rgb(191, 110, 110);
  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
@@ -65,7 +65,7 @@ button {
   transition: all 0.35s ease-in-out;
 
   &.is-active {
-    top: 100px;
+    top: 87px;
     width: 100%;
     height: auto;
   }
@@ -111,6 +111,9 @@ button {
       margin-left: 10px;
       font-size: 22px;
     }
+  }
+  #logo{
+    transition:all 2s ease-in-out ;
   }
 
 

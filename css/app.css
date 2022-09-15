@@ -155,7 +155,7 @@ button {
 }
 
 .header {
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
   text-align: center;
@@ -167,7 +167,6 @@ button {
   transition: all 0.35s ease;
 }
 .header.on-scroll {
-  transition: all 3s ease;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
@@ -195,7 +194,7 @@ button {
   transition: all 0.35s ease-in-out;
 }
 .menu.is-active {
-  top: 100px;
+  top: 87px;
   width: 100%;
   height: auto;
 }
@@ -234,6 +233,9 @@ button {
   text-align: center;
   margin-left: 10px;
   font-size: 22px;
+}
+.menu #logo {
+  transition: all 2s ease-in-out;
 }
 .menu-link:hover {
   cursor: pointer;
@@ -464,9 +466,14 @@ button {
     margin: 10px 0;
   }
 }
+@media only screen and (max-width: 500px) {
+  .product-collection-title .product-title-name {
+    font-size: 27px;
+  }
+}
 .product-detail-item {
   display: flex;
-  margin-top: 53px;
+  margin-top: 155px;
   flex-wrap: wrap;
 }
 .product-detail-item-specific {
@@ -579,11 +586,18 @@ button {
   padding: 9px 9px;
 }
 
+.row {
+  margin-left: 15px;
+}
+
 @media only screen and (max-width: 550px) {
   .active,
 .demo:hover {
     opacity: 1;
     padding: 0px;
+  }
+  .row {
+    margin-left: 7px;
   }
 }
 .product-detail-prices {
@@ -839,6 +853,9 @@ button {
 }
 
 @media only screen and (max-width: 500px) {
+  .product-detail-item-specific-title {
+    font-size: 29px;
+  }
   .btn--outline {
     margin-left: 0px;
   }
@@ -958,7 +975,7 @@ button {
     background-color: #00344c;
   }
 }
-@media screen and (max-width: 627px) {
+@media screen and (max-width: 661px) {
   .footer {
     position: relative;
   }
@@ -970,6 +987,12 @@ button {
 @media screen and (max-width: 510px) {
   .footer-menu {
     display: none;
+  }
+  .footer-contact {
+    height: 195px;
+  }
+  .footer-contact .footer-contact-icon {
+    padding: 64px 0 0px 0;
   }
 }
 body {
@@ -1340,6 +1363,11 @@ body {
 @media only screen and (max-width: 1231px) {
   .product-accessories-images-content-first {
     margin-bottom: 20px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .product-accessories-title {
+    font-size: 22px;
   }
 }
 :root {

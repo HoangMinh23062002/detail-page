@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Roboto+Condensed:wght@400;700&display=swap');
 .product-detail-item {
   display: flex;
-  margin-top: 53px;
+  margin-top: 155px;
   flex-wrap: wrap;
   &-slider {
   }
@@ -121,12 +121,20 @@
   opacity: 1;
   border: 1px solid #a5a5a5;
   padding: 9px 9px;
+
+  
+}
+.row{
+  margin-left: 15px;
 }
 @media only screen and (max-width: 550px) {
   .active,
 .demo:hover {
   opacity: 1;
   padding: 0px;
+}
+.row{
+  margin-left: 7px;
 }
 }
 .product-detail-prices {
@@ -428,6 +436,10 @@ max-width: 450px;
   }
 }
 @media only screen and (max-width: 500px) {
+  .product-detail-item-specific-title {
+    font-size: 29px;
+  }
+  
   
 .btn {
   &--outline{

@@ -120,7 +120,7 @@
     }
   }
 }
-@media screen and (max-width: 627px) {
+@media screen and (max-width: 661px) {
   .footer {
     position: relative;
     &-schedule {
@@ -133,4 +133,10 @@
   .footer-menu{
     display: none;
   }
+  .footer-contact {
+    height: 195px;
+}
+.footer-contact .footer-contact-icon {
+  padding: 64px 0 0px 0;
+}
 }
