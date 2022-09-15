@@ -234,9 +234,6 @@ button {
   margin-left: 10px;
   font-size: 22px;
 }
-.menu #logo {
-  transition: all 2s ease-in-out;
-}
 .menu-link:hover {
   cursor: pointer;
 }
@@ -477,7 +474,7 @@ button {
   flex-wrap: wrap;
 }
 .product-detail-item-specific {
-  margin-left: 115px;
+  margin-left: 113px;
   align-items: center;
 }
 .product-detail-item-specific-title {
@@ -623,7 +620,7 @@ button {
 
 .product-detail-color {
   display: flex;
-  margin-left: -184px;
+  margin-left: -191px;
 }
 
 .product-detail-color-name {
